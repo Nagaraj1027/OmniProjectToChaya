@@ -6,18 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.omniprojecttochaya.activitylifecycle.OneActivity;
 import com.example.omniprojecttochaya.explicitintent.FirstActivity;
 import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn1,btn2;
+    Button btn1,btn2,btn3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
+
         btn1=(Button) findViewById(R.id.btn1);
         btn2=(Button) findViewById(R.id.btn2);
+        btn3=(Button) findViewById(R.id.btn3);
         //hello
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //logic
+                Intent to_implicit=new Intent(MainActivity.this, OneActivity.class);
+                startActivity(to_implicit);
+            }
+        });
 
         initViews();
     }

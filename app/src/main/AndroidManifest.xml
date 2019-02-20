@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".implicitintent.ImplicitIntent"></activity>
+        <activity android:name=".activitylifecycle.SecondActivity"></activity>
+        <activity android:name=".activitylifecycle.OneActivity" />
+        <activity android:name=".implicitintent.ImplicitIntent" />
         <activity android:name=".explicitintent.FirstActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
