@@ -32,6 +32,7 @@ public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        //hello
         super.onStart();
         Log.e("Second acivity onStart", "In Second acivity onStart");
     }
