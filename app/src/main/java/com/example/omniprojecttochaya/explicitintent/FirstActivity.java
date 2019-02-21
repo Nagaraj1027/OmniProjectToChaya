@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.omniprojecttochaya.MainActivity;
 import com.example.omniprojecttochaya.R;
+import com.example.omniprojecttochaya.omniclass.OmniConstants;
 
 
 public class FirstActivity extends AppCompatActivity {
@@ -19,8 +20,10 @@ public class FirstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_first);
         btn1 = (Button) findViewById(R.id.btn1);
 
-        String name = getIntent().getStringExtra("key1");
+        String name = getIntent().getStringExtra(OmniConstants.KEY_NAME);
+        String name2 = getIntent().getStringExtra(OmniConstants.KEY_NAME);
         System.out.println(name);
+        System.out.println(name2);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

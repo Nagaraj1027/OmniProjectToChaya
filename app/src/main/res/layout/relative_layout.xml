@@ -4,57 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:text="GOTO  FIRST ACT"
-        android:textColor="@color/colorAccent" />
+        android:text="EXPLICIT INTENT"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn1"
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
-        android:text="GOTO  IMPLICIT INTENT"
-        android:textColor="@color/colorAccent" />
+        android:text="IMPLICIT INTENT"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn2"
         android:layout_marginTop="30dp"
         android:background="@color/colorPrimary"
-        android:text="GOTO  Actcity lifecycle "
-        android:textColor="@color/colorAccent" />
-
-    <TextView
-        android:id="@+id/tv1"
-        style="@style/tv_style"
-        android:layout_marginRight="20dp"
-        android:text="@string/tv_text1"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/tv2"
-        style="@style/tv_style"
-        android:layout_marginRight="20dp"
-        android:layout_toRightOf="@+id/tv1"
-        android:text="@string/tv_text2"
-        android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/tv3"
-        style="@style/tv_style"
-        android:layout_toRightOf="@+id/tv2"
-        android:text="@string/tv_text3"
-        android:textColor="@color/black" />
-
+        android:text="ACTIVITY LIFE CYCLE "
+        android:textColor="@color/white" />
 
 </RelativeLayout>
