@@ -10,12 +10,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".fragment.StaticFragmentsActivity"></activity>
         <activity android:name=".activitylifecycle.SecondActivity" />
         <activity android:name=".activitylifecycle.OneActivity" />
         <activity android:name=".implicitintent.ImplicitIntent" />
         <activity android:name=".explicitintent.FirstActivity" />
         <activity android:name=".MainActivity" />
-
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
