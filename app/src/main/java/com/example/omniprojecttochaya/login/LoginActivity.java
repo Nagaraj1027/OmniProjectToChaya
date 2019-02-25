@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
                     System.out.println("inserted preferPassword " + OmniClass.getPasswordFromPreferences());
                     System.out.println("inserted preferstate " + OmniClass.getLoginStateFromPreferences());
 
-                    Toast.makeText(getApplicationContext(), "Lgin successful", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Login successful", Toast.LENGTH_LONG).show();
                     Intent to_home = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(to_home);
 

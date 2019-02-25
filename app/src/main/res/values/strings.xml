@@ -3,5 +3,6 @@
     <string name="tv_text1">Android1</string>
     <string name="tv_text2">Android2</string>
     <string name="tv_text3">Android3</string>
+    <string name="application">Application</string>
 
 </resources>
