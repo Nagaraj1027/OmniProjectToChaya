@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="EXPLICIT INTENT"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn1"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="IMPLICIT INTENT"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn2"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:text="ACTIVITY LIFE CYCLE "
+        android:textColor="@color/white" />
+</FrameLayout>
