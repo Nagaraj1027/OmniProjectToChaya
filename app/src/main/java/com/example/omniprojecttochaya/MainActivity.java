@@ -11,17 +11,18 @@ import com.example.omniprojecttochaya.activitylifecycle.OneActivity;
 import com.example.omniprojecttochaya.explicitintent.FirstActivity;
 import com.example.omniprojecttochaya.fragment.StaticFragmentsActivity;
 import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
+import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4;
+    Button btn1, btn2, btn3, btn4, btn5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
-
+//master branch
         initViews();
         Log.e("inside MainActivity", "inside MainActivity");
     }
@@ -31,11 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
+        btn5 = (Button) findViewById(R.id.btn5);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
+        btn5.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn4:
                 gotoStaticFragments();
+                break;
+
+            case R.id.btn5:
+                gotoListview();
                 break;
         }
     }
@@ -76,6 +83,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoStaticFragments() {
         Intent to_actlifecycle = new Intent(MainActivity.this, StaticFragmentsActivity.class);
+        startActivity(to_actlifecycle);
+    }
+
+    void gotoListview() {
+        Intent to_actlifecycle = new Intent(MainActivity.this, ListViewExampleActivity.class);
         startActivity(to_actlifecycle);
     }
 }

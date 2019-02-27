@@ -4,19 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".explicitintent.FirstActivity">
+    tools:context=".listview.ListViewExampleActivity">
 
-    <TextView
-        android:id="@+id/tv1"
-        style="@style/tv_style"
-        android:layout_centerInParent="true"
-        android:layout_marginRight="20dp"
-        android:text="Fragment one"
-        android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/btn"
+    <ListView
+        android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
