@@ -7,20 +7,20 @@
     android:layout_margin="10dp">
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:src="@mipmap/ic_launcher_round" />
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_marginLeft="10dp"
-        android:layout_toEndOf="@+id/img"
-        android:layout_toRightOf="@+id/img"
+        android:layout_toEndOf="@+id/avatar"
+        android:layout_toRightOf="@+id/avatar"
         android:text="Name of the User" />
 
 </RelativeLayout>

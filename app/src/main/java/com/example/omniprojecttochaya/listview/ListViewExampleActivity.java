@@ -11,10 +11,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.omniprojecttochaya.R;
+import com.example.omniprojecttochaya.model.UserData;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class ListViewExampleActivity extends AppCompatActivity {
 
     ListView lv;
+    ArrayList<UserData> al_userdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,32 +29,64 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
         lv = findViewById(R.id.lv);
 
+        createListdata();
+
         DisplayData displayData = new DisplayData();
         lv.setAdapter(displayData);
     }
 
-    class DisplayData extends BaseAdapter {
+    void createListdata() {
 
+        al_userdata = new ArrayList<UserData>();
+
+        for (int i = 0; i < 3; i++) {
+
+            UserData userData = new UserData();
+            userData.setCity("Hyderabad" + i);
+            userData.setCountry("India" + i);
+           /* if (i == 0) {
+                userData.setCity("Hyderabad");
+                userData.setCountry("India");
+            }
+            if (i == 1) {
+                userData.setCity("Bangalore");
+                userData.setCountry("India");
+            }
+
+            if (i == 2) {
+                userData.setCity("Delhi");
+                userData.setCountry("India");
+            }*/
+
+            al_userdata.add(userData);
+        }
+    }
+
+    class DisplayData extends BaseAdapter {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            ImageView avatar;
-            TextView tvName;
+            ViewHolder viewHolder;
 
-            LayoutInflater layoutInflater = getLayoutInflater();
-            View view = layoutInflater.inflate(R.layout.row_simple_listview, null);
+            if (convertView == null) {
+                LayoutInflater layoutInflater = getLayoutInflater();
+                convertView = layoutInflater.inflate(R.layout.row_simple_listview, null);
 
-            tvName = view.findViewById(R.id.tv);
-            avatar = view.findViewById(R.id.img);
+                viewHolder = new ViewHolder(convertView);
+                convertView.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
 
-
-            return view;
+            viewHolder.tvName.setText(al_userdata.get(position).getCity());
+            viewHolder.avatar.setImageResource(R.drawable.ic_launcher_background);
+            return convertView;
         }
 
         @Override
         public int getCount() {
-            return 10;
+            return al_userdata.size();
         }
 
         @Override
@@ -60,7 +98,17 @@ public class ListViewExampleActivity extends AppCompatActivity {
         public long getItemId(int position) {
             return 0;
         }
+    }
 
+    private class ViewHolder {
+        ImageView avatar;
+        TextView tvName;
+
+        private ViewHolder(View view) {
+            tvName = (TextView) view.findViewById(R.id.tvName);
+            avatar = (ImageView) view.findViewById(R.id.avatar);
+
+        }
 
     }
 }
