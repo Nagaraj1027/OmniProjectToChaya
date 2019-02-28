@@ -13,10 +13,11 @@ import com.example.omniprojecttochaya.fragment.StaticFragmentsActivity;
 import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
+import com.example.omniprojecttochaya.recyclerview.RecyclerViewExample;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5;
+    Button btn1, btn2, btn3, btn4, btn5,btn6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,12 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
         btn5 = (Button) findViewById(R.id.btn5);
+        btn6 = (Button) findViewById(R.id.btn6);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
         btn3.setOnClickListener(this);
         btn4.setOnClickListener(this);
         btn5.setOnClickListener(this);
+        btn6.setOnClickListener(this);
     }
 
     @Override
@@ -59,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn5:
                 gotoListview();
+                break;
+            case R.id.btn6:
+                gotoRecyclerViewExample();
                 break;
         }
     }
@@ -89,5 +95,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void gotoListview() {
         Intent to_actlifecycle = new Intent(MainActivity.this, ListViewExampleActivity.class);
         startActivity(to_actlifecycle);
+    }
+
+    void gotoRecyclerViewExample() {
+        Intent to_recyclerViewExample = new Intent(MainActivity.this, RecyclerViewExample.class);
+        startActivity(to_recyclerViewExample);
     }
 }
