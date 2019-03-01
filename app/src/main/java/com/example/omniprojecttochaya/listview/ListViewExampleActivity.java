@@ -13,12 +13,16 @@ import android.widget.TextView;
 
 import com.example.omniprojecttochaya.R;
 
+import com.example.omniprojecttochaya.model.UserData;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class ListViewExampleActivity extends AppCompatActivity {
 
     ListView lv;
+    ArrayList<UserData> al_userdata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,82 +31,91 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
         lv = findViewById(R.id.lv);
 
+        createListdata();
+
         DisplayData displayData = new DisplayData();
         lv.setAdapter(displayData);
     }
 
-    public class RowItem {
-        private int imageId;
-        private String title;
+    void createListdata() {
 
-        public RowItem(int imageId, String title) {
-            this.imageId = imageId;
-            this.title = title;
-        }
+        al_userdata = new ArrayList<UserData>();
 
-        public int getImageId() {
-            return imageId;
-        }
+        for (int i = 0; i < 3; i++) {
 
-        public void setImageId(int imageId) {
-            this.imageId = imageId;
-        }
+            UserData userData = new UserData();
+            userData.setCity("Hyderabad" + i);
+            userData.setCountry("India" + i);
+           /* if (i == 0) {
+                userData.setCity("Hyderabad");
+                userData.setCountry("India");
+            }
+            if (i == 1) {
+                userData.setCity("Bangalore");
+                userData.setCountry("India");
+            }
 
-        public String getTitle() {
-            return title;
-        }
+            if (i == 2) {
+                userData.setCity("Delhi");
+                userData.setCountry("India");
+            }*/
 
-        public void setTitle(String title) {
-            this.title = title;
+            al_userdata.add(userData);
         }
     }
 
     class DisplayData extends BaseAdapter {
-        List<RowItem> rowItems;
-
-        ImageView avatar;
-        TextView tvName;
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
+            ViewHolder viewHolder;
+
+            if (convertView == null) {
+                LayoutInflater layoutInflater = getLayoutInflater();
+                convertView = layoutInflater.inflate(R.layout.row_simple_listview, null);
+
+                viewHolder = new ViewHolder(convertView);
+                convertView.setTag(viewHolder);
+            } else {
+                viewHolder = (ViewHolder) convertView.getTag();
+            }
+
+            viewHolder.tvName.setText(al_userdata.get(position).getCity());
+            viewHolder.avatar.setImageResource(R.drawable.ic_launcher_background);
+            return convertView;
+        }
+
+        @Override
+        public int getCount() {
+            return al_userdata.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+    }
+
+    private class ViewHolder {
+        ImageView avatar;
+        TextView tvName;
+
+        private ViewHolder(View view) {
+            tvName = (TextView) view.findViewById(R.id.tvName);
+            avatar = (ImageView) view.findViewById(R.id.avatar);
+
+        }
+
+    }
+
             LayoutInflater layoutInflater = getLayoutInflater();
             View view = layoutInflater.inflate(R.layout.row_simple_listview, null);
 
-         /*   if (convertView == null) {
-                convertView = layoutInflater.inflate(R.layout.row_simple_listview, null);
-                holder = new DisplayData();
-                holder.avatar = (ImageView) convertView.findViewById(R.id.img);
-                holder.tvName = (TextView) convertView.findViewById(R.id.tv);
-                convertView.setTag(holder);
-                Log.e("Hello", "Hello");
-            } else {
-                holder = (DisplayData) convertView.getTag();
-                Log.e("Hello2", "Hello2");
-            }*/
-            tvName = view.findViewById(R.id.tv);
-            avatar = view.findViewById(R.id.img);
-        /*    rowItems = (RowItem) getItem(position);
-            holder.tvName.setText(rowItems.getTitle());
-            holder.avatar.setImageResource(rowItems .getImageId());*/
-            return view;
         }
-            @Override
-            public int getCount(){
-                return 10;
-            }
-
-            @Override
-            public Object getItem (int position){
-                return null;
-            }
-
-            @Override
-            public long getItemId ( int position){
-                return 0;
-            }
-
-
-        }
-    }
 

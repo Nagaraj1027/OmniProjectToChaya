@@ -2,6 +2,7 @@ package com.example.omniprojecttochaya.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,10 +22,8 @@ import com.example.omniprojecttochaya.activitylifecycle.SecondActivity;
 
 public class FragmentOne extends Fragment {
 
-    Button btn;
-
     @Override
-     public void onAttach(Context context){
+    public void onAttach(Context context) {
         super.onAttach(context);
         Log.e("FragmentOne onAttach", "In FragmentOne onAttach");
         Toast.makeText(getActivity(), "In FragmentOne onAttach", Toast.LENGTH_LONG).show();
@@ -44,24 +43,29 @@ public class FragmentOne extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_one, container, false);
+
+       /* if (null!=(getArguments().getString("key1"))) {
+            String str = getArguments().getString("key1");
+            System.out.println("Passed value is from activyt is " + str);
+        }
+*/
+        Button btn = (Button) view.findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         Log.e("FragmentOne CreateView", "In FragmentOne CreateView");
         Toast.makeText(getActivity(), "In FragmentOne CreateView", Toast.LENGTH_LONG).show();
         return view;
+    }
 
       /*  if (null!=(getArguments().getString("key1"))) {
             String str = getArguments().getString("key1");
             System.out.println("Passed value is from activyt is " + str);
-        }
+        }*/
 
-        btn = (Button) view.findViewById(R.id.btn);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-         }
-        });
-        return view;*/
-    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -83,6 +87,8 @@ public class FragmentOne extends Fragment {
         Log.e("FragmentOne onResume", "In FragmentOne onResume");
         Toast.makeText(getActivity(), "In FragmentOne onResume", Toast.LENGTH_LONG).show();
     }
+
+
 
     @Override
     public void onPause() {
