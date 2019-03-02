@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 //master branch
-//master branch
         initViews();
         Log.e("inside MainActivity", "inside MainActivity");
     }

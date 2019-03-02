@@ -66,7 +66,6 @@ public class FragmentOne extends Fragment {
             System.out.println("Passed value is from activyt is " + str);
         }*/
 
-
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
