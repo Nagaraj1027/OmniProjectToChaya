@@ -61,10 +61,7 @@ public class FragmentOne extends Fragment {
         return view;
     }
 
-      /*  if (null!=(getArguments().getString("key1"))) {
-            String str = getArguments().getString("key1");
-            System.out.println("Passed value is from activyt is " + str);
-        }*/
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

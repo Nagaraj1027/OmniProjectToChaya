@@ -114,8 +114,5 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
     }
 
-            LayoutInflater layoutInflater = getLayoutInflater();
-            View view = layoutInflater.inflate(R.layout.row_simple_listview, null);
-
         }
 
