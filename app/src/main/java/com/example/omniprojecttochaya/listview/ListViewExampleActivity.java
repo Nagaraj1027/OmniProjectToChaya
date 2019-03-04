@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.omniprojecttochaya.R;
+import com.example.omniprojecttochaya.holder.ViewHolder;
 import com.example.omniprojecttochaya.model.UserData;
 
 import java.util.ArrayList;
@@ -100,7 +101,7 @@ public class ListViewExampleActivity extends AppCompatActivity {
         }
     }
 
-    private class ViewHolder {
+   /* private class ViewHolder {
         ImageView avatar;
         TextView tvName;
 
@@ -110,5 +111,5 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
         }
 
-    }
+    }*/
 }
