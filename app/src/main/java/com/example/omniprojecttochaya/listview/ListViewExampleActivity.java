@@ -1,5 +1,6 @@
 package com.example.omniprojecttochaya.listview;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.omniprojecttochaya.R;
+import com.example.omniprojecttochaya.adapters.DisplayData;
 import com.example.omniprojecttochaya.holder.ViewHolder;
 import com.example.omniprojecttochaya.model.UserData;
 
@@ -32,7 +34,7 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
         createListdata();
 
-        DisplayData displayData = new DisplayData();
+        DisplayData displayData = new DisplayData(al_userdata, ListViewExampleActivity.this);
         lv.setAdapter(displayData);
     }
 
@@ -63,7 +65,7 @@ public class ListViewExampleActivity extends AppCompatActivity {
         }
     }
 
-    class DisplayData extends BaseAdapter {
+    /*class DisplayData extends BaseAdapter {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
@@ -72,7 +74,7 @@ public class ListViewExampleActivity extends AppCompatActivity {
 
             if (convertView == null) {
                 LayoutInflater layoutInflater = getLayoutInflater();
-                convertView = layoutInflater.inflate(R.layout.row_simple_listview, null);
+                convertView = layoutInflater.inflate(R.layout.row_simple_listview1, null);
 
                 viewHolder = new ViewHolder(convertView);
                 convertView.setTag(viewHolder);
@@ -99,9 +101,9 @@ public class ListViewExampleActivity extends AppCompatActivity {
         public long getItemId(int position) {
             return 0;
         }
-    }
+    }*/
 
-   /* private class ViewHolder {
+    /*private class ViewHolder {
         ImageView avatar;
         TextView tvName;
 
