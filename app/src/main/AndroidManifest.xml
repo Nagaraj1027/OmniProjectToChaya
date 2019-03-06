@@ -18,6 +18,7 @@
         <activity android:name=".explicitintent.FirstActivity" />
         <activity android:name=".dynamicfragments.DynamicFragmntsActivity" />
         <activity android:name=".MainActivity" />
+        <activity android:name=".jsonparser.JSonActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>

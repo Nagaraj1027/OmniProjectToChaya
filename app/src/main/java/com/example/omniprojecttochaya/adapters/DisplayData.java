@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 
 import com.example.omniprojecttochaya.R;
 import com.example.omniprojecttochaya.holder.ViewHolder;
+import com.example.omniprojecttochaya.model.User;
 import com.example.omniprojecttochaya.model.UserData;
 
 import java.util.ArrayList;
@@ -16,11 +17,19 @@ import java.util.ArrayList;
 public class DisplayData extends BaseAdapter {
 
     ArrayList<UserData> al_userdata;
+    ArrayList<User> al_users;
     Activity activity;
+    int i;
 
     public DisplayData(ArrayList<UserData> al_userdata, Activity activity) {
         this.al_userdata = al_userdata;
         this.activity = activity;
+    }
+
+    public DisplayData(ArrayList<User> al_users, Activity activity,int i) {
+        this.al_users = al_users;
+        this.activity = activity;
+        this.i=i;
     }
 
     @Override
