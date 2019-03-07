@@ -17,6 +17,7 @@
         <activity android:name=".activitylifecycle.OneActivity" />
         <activity android:name=".implicitintent.ImplicitIntent" />
         <activity android:name=".explicitintent.FirstActivity" />
+        <activity android:name=".dynamicfragments.DynamicFragmntsActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
         <activity android:name=".splash.SplashActivity">
