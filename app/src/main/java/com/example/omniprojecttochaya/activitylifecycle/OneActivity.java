@@ -20,7 +20,7 @@ public class OneActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first2);
 
-        btn1 = (Button) findViewById(R.id.btn1);
+        btn1 = findViewById(R.id.btn1);
 
         Log.e("OneActivity onCreate", "In FirstA acivity onCreate");
         Toast.makeText(getApplicationContext(), "In FirstA acivity onCreate", Toast.LENGTH_LONG).show();

@@ -49,7 +49,7 @@ public class FragmentOne extends Fragment {
             System.out.println("Passed value is from activyt is " + str);
         }
 */
-        Button btn = (Button) view.findViewById(R.id.btn);
+        Button btn = view.findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -24,8 +24,8 @@ public class DynamicFragmntsActivity extends AppCompatActivity {
     }
 
     private void findViews() {
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
     }
 
     private void setAdapter() {

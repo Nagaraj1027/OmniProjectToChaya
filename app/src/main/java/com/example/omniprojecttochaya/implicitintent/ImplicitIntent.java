@@ -19,9 +19,9 @@ public class ImplicitIntent extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_implicit_intent);
-        btn1 = (Button) findViewById(R.id.btn1);
+        btn1 = findViewById(R.id.btn1);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         getSupportActionBar();
         if (toolbar != null) {
             toolbar.setTitle("Home");

@@ -15,7 +15,7 @@ public class StaticFragmentsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_static_fragments);
-        btn = (Button) findViewById(R.id.btn);
+        btn = findViewById(R.id.btn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

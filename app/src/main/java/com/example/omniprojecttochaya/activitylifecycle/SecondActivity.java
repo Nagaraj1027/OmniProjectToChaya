@@ -18,7 +18,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        btn1=(Button) findViewById(R.id.btn1);
+        btn1= findViewById(R.id.btn1);
         Log.e("Second acivity onCreate", "In Second acivity onCreate");
         Toast.makeText(getApplicationContext(), "In Second acivity onCreate", Toast.LENGTH_LONG).show();
 

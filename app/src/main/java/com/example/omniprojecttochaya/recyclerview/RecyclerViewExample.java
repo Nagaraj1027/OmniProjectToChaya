@@ -69,7 +69,7 @@ public class RecyclerViewExample extends AppCompatActivity {
             }
         });*/
 
-        rv = (RecyclerView) findViewById(R.id.rv);
+        rv = findViewById(R.id.rv);
     }
 
     @Override
@@ -177,9 +177,9 @@ public class RecyclerViewExample extends AppCompatActivity {
             private MyViewHolder(View view) {
                 super(view);
 
-                this.tv_name = (TextView) view.findViewById(R.id.tv_name);
-                this.img = (ImageView) view.findViewById(R.id.img);
-                this.rl = (RelativeLayout) view.findViewById(R.id.rl);
+                this.tv_name = view.findViewById(R.id.tv_name);
+                this.img = view.findViewById(R.id.img);
+                this.rl = view.findViewById(R.id.rl);
 
             }
         }
@@ -197,7 +197,7 @@ public class RecyclerViewExample extends AppCompatActivity {
 
             @Override
             public int getMovementFlags(RecyclerView recyclerView, RecyclerView.ViewHolder viewHolder) {
-                return super.makeFlag(ItemTouchHelper.ACTION_STATE_DRAG, ItemTouchHelper.UP | ItemTouchHelper.DOWN);
+                return makeFlag(ItemTouchHelper.ACTION_STATE_DRAG, ItemTouchHelper.UP | ItemTouchHelper.DOWN);
             }
 
             @Override

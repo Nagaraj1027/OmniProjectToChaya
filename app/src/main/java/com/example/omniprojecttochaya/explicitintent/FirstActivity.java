@@ -18,7 +18,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        btn1 = (Button) findViewById(R.id.btn1);
+        btn1 = findViewById(R.id.btn1);
 
         String name = getIntent().getStringExtra(OmniConstants.KEY_NAME);
         String name2 = getIntent().getStringExtra(OmniConstants.KEY_NAME);
