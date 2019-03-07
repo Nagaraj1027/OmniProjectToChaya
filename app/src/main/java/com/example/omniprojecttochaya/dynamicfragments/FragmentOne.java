@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 
 import com.example.omniprojecttochaya.R;
+import com.example.omniprojecttochaya.adapters.DisplayData;
 import com.example.omniprojecttochaya.model.User;
 
 import java.util.ArrayList;
@@ -93,13 +94,12 @@ public class FragmentOne extends Fragment {
             al_users.add(user);
         }
 
-        populateListView = new DisplayData();
+        populateListView = new DisplayData(al_users, getActivity(), 1);
         listView.setAdapter(populateListView);
-
     }
 
 
-    public class DisplayData extends BaseAdapter {
+    /*public class DisplayData extends BaseAdapter {
         LayoutInflater inflater;
 
         @Override
@@ -138,9 +138,9 @@ public class FragmentOne extends Fragment {
         public int getCount() {
             return al_users.size();
         }
-    }
+    }*/
 
-    private class MyViewHolder {
+   /* private class MyViewHolder {
         ImageView img;
         TextView tv;
 
@@ -149,7 +149,7 @@ public class FragmentOne extends Fragment {
             img = (ImageView) view.findViewById(R.id.img);
             tv = (TextView) view.findViewById(R.id.tv);
         }
-    }
+    }*/
 
     @Override
     public void onStart() {

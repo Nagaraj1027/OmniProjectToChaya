@@ -13,13 +13,14 @@ import com.example.omniprojecttochaya.dynamicfragments.DynamicFragmntsActivity;
 import com.example.omniprojecttochaya.explicitintent.FirstActivity;
 import com.example.omniprojecttochaya.fragment.StaticFragmentsActivity;
 import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
+import com.example.omniprojecttochaya.jsonparser.JSonActivity;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
 import com.example.omniprojecttochaya.recyclerview.RecyclerViewExample;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn5 = (Button) findViewById(R.id.btn5);
         btn6 = (Button) findViewById(R.id.btn6);
         btn7 = (Button) findViewById(R.id.btn7);
+        btn8 = (Button) findViewById(R.id.btn8);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn5.setOnClickListener(this);
         btn6.setOnClickListener(this);
         btn7.setOnClickListener(this);
+        btn8.setOnClickListener(this);
     }
 
     @Override
@@ -78,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn7:
                 gotoDynamicFragments();
+                break;
+            case R.id.btn8:
+                gotoJsonParser();
                 break;
         }
     }
@@ -117,6 +123,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoDynamicFragments() {
         Intent to_recyclerViewExample = new Intent(MainActivity.this, DynamicFragmntsActivity.class);
+        startActivity(to_recyclerViewExample);
+    }
+
+    void gotoJsonParser() {
+        Intent to_recyclerViewExample = new Intent(MainActivity.this, JSonActivity.class);
         startActivity(to_recyclerViewExample);
     }
 }
