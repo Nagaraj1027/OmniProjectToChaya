@@ -16,10 +16,11 @@ import com.example.omniprojecttochaya.jsonparser.JSonActivity;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
 import com.example.omniprojecttochaya.recyclerview.RecyclerViewExample;
+import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn6 = (Button) findViewById(R.id.btn6);
         btn7 = (Button) findViewById(R.id.btn7);
         btn8 = (Button) findViewById(R.id.btn8);
+        btn9 = (Button) findViewById(R.id.btn9);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn6.setOnClickListener(this);
         btn7.setOnClickListener(this);
         btn8.setOnClickListener(this);
+        btn9.setOnClickListener(this);
     }
 
     @Override
@@ -77,6 +80,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn8:
                 gotoJsonParser();
+                break;
+
+            case R.id.btn9:
+                gotoVolleyServiceCall();
                 break;
         }
     }
@@ -123,4 +130,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_recyclerViewExample = new Intent(MainActivity.this, JSonActivity.class);
         startActivity(to_recyclerViewExample);
     }
+
+    void gotoVolleyServiceCall() {
+        Intent to_recyclerViewExample = new Intent(MainActivity.this, VollleyExample1.class);
+        startActivity(to_recyclerViewExample);
+    }
+
 }
