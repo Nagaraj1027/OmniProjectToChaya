@@ -7,93 +7,127 @@
     android:layout_margin="20dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:text="EXPLICIT INTENT"
-        android:textColor="@color/white" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn1"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="IMPLICIT INTENT"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn2"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="ACTIVITY LIFE CYCLE "
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn3"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="STATIC FRAGMENTS"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn4"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="LISTVIEW EXAMPLE"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/btn6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn5"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="RECYCLERVIEW EXAMPLE"
-        android:textColor="@color/white" />
-
-    <Button
-        android:id="@+id/btn7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn6"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="FRAGMENTS WITH TABS"
-        android:textColor="@color/white" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
 
-    <Button
-        android:id="@+id/btn8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn7"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="LISTVIEW WITH JSONDATA"
-        android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="EXPLICIT INTENT"
+                android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn8"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:text="VOLLEY LIBRARY CALL"
-        android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn1"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="IMPLICIT INTENT"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn2"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="ACTIVITY LIFE CYCLE "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn3"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="STATIC FRAGMENTS"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn4"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="LISTVIEW EXAMPLE"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn5"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="RECYCLERVIEW EXAMPLE"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn6"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="FRAGMENTS WITH TABS"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn7"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="LISTVIEW WITH JSONDATA"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn8"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="VOLLEY LIBRARY CALL"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn8"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Service example"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btn11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn8"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Intent service "
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

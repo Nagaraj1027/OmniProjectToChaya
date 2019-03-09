@@ -21,6 +21,8 @@
         <activity android:name=".jsonparser.JSonActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
         <activity android:name=".volleyserevercalls.VollleyExample1" />
+        <activity android:name=".service.ServiceActivity" />
+        <activity android:name=".intentservice.IntentServiceActivity" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +30,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".intentservice.TimeCountService"
+            android:exported="false" />
+        <service
+            android:name=".service.ServiceTimeCount"
+            android:exported="false" />
+
+        <receiver android:name=".intentservice.MyIntentReceiver" />
     </application>
 
 </manifest>
