@@ -10,9 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listview.ListViewExampleActivity"></activity>
-        <activity android:name=".fragment.StaticFragmentsActivity"></activity>
-        <activity android:name=".login.LoginActivity"></activity>
+        <activity android:name=".listview.ListViewExampleActivity" />
+        <activity android:name=".fragment.StaticFragmentsActivity" />
         <activity android:name=".activitylifecycle.SecondActivity" />
         <activity android:name=".activitylifecycle.OneActivity" />
         <activity android:name=".implicitintent.ImplicitIntent" />
@@ -21,6 +20,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".jsonparser.JSonActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
+        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".volleyserevercalls.VollleyExample1" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
