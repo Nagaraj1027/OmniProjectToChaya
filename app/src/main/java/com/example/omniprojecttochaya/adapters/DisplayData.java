@@ -54,9 +54,12 @@ public class DisplayData extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return al_userdata.size();
+        if (i == 1) {
+            return al_users.size();
+        } else {
+            return al_userdata.size();
+        }
     }
-
     @Override
     public Object getItem(int position) {
         return null;

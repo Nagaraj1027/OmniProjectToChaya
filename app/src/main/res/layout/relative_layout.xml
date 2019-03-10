@@ -19,9 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
-        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
-        android:text="EXPLICIT INTENT"
+        android:text="IMPLICIT INTENT"
         android:textColor="@color/white" />
 
     <Button

@@ -79,7 +79,6 @@ public class JSonActivity extends AppCompatActivity {
                 locations.setCity(cty);
                 locations.setCountry(cntry);
 
-
                 al_locations.add(locations);
 
 

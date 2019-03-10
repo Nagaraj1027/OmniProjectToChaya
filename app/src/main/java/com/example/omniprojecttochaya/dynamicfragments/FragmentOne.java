@@ -76,7 +76,8 @@ public class FragmentOne extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment_one, container, false);
         createList(view);
         //return inflater.inflate(R.layout.fragment_fragment_one, container, false);
-
+        populateListView = new DisplayData(al_users, getActivity(), 1);
+        listView.setAdapter(populateListView);
         return view;
 
     }
