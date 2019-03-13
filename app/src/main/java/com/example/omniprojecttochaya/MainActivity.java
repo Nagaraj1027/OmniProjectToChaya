@@ -15,6 +15,7 @@ import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
 import com.example.omniprojecttochaya.intentservice.IntentServiceActivity;
 import com.example.omniprojecttochaya.jsonparser.JSonActivity;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
+import com.example.omniprojecttochaya.notificationsFcm.NotificationActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
 import com.example.omniprojecttochaya.recyclerview.RecyclerViewExample;
 import com.example.omniprojecttochaya.service.ServiceActivity;
@@ -22,7 +23,7 @@ import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11,btn12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn9 = (Button) findViewById(R.id.btn9);
         btn10 = (Button) findViewById(R.id.btn10);
         btn11 = (Button) findViewById(R.id.btn11);
+        btn12 = (Button) findViewById(R.id.btn12);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn9.setOnClickListener(this);
         btn10.setOnClickListener(this);
         btn11.setOnClickListener(this);
+        btn12.setOnClickListener(this);
     }
 
     @Override
@@ -98,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn11:
                 gotoIntentService();
+                break;
+            case R.id.btn12:
+                gotoNotification();
                 break;
         }
     }
@@ -157,6 +163,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoService() {
         Intent to_explicitAct = new Intent(MainActivity.this, ServiceActivity.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoNotification() {
+        Intent to_explicitAct = new Intent(MainActivity.this, NotificationActivity.class);
         startActivity(to_explicitAct);
     }
 }
