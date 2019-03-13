@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -14,21 +21,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        />
-
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:text="EXPLICIT INTENT"
-        android:textColor="@color/white" />
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:text="EXPLICIT INTENT"
+                android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn2"
@@ -106,7 +105,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btn8"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:text="VOLLEY LIBRARY CALL"
                 android:textColor="@color/white" />
@@ -115,8 +114,8 @@
                 android:id="@+id/btn10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn8"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/btn9"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:text="Service example"
                 android:textColor="@color/white" />
@@ -126,14 +125,13 @@
                 android:id="@+id/btn11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/btn8"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/btn10"
+                android:layout_marginTop="20dp"
                 android:background="@color/colorPrimary"
                 android:text="Intent service "
                 android:textColor="@color/white" />
 
         </RelativeLayout>
     </ScrollView>
-
 
 </RelativeLayout>
