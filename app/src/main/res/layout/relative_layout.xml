@@ -135,6 +135,16 @@
                 android:text="Notification FCM "
                 android:textColor="@color/white" />
 
+            <Button
+                android:id="@+id/btn13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn12"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="SQLite DataBase "
+                android:textColor="@color/white" />
+
 
         </RelativeLayout>
     </ScrollView>
