@@ -39,7 +39,7 @@ public class VollleyExample1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vollley_example);
+        setContentView(R.layout.activity_volley_service_example);
         initViews();
     }
 
@@ -71,15 +71,15 @@ public class VollleyExample1 extends AppCompatActivity {
         JSONObject jsonObject = new JSONObject();
         try {
 
-            // jsonObject.put("page", 2);
+            //jsonObject.put("page", 2);
             Log.d("request", jsonObject.toString());
 
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
-                    "https://reqres.in/api/users?page=2", null,
+            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                    "https://reqres.in/api/users?page=2", jsonObject,
                     new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {
-                            Log.d("response", response + "");
+                            Log.d("response is", response + "");
 
                             String page = "", per_page = "", total = "", total_pages = "";
                             try {
@@ -96,10 +96,17 @@ public class VollleyExample1 extends AppCompatActivity {
                                 Log.d("per_page", per_page);
                                 Log.d("total", total + "");
                                 Log.d("total_pages", total_pages + "");
+                                Log.d("jsonArray ", jsonArray.length() + "");
 
-
+                                al = new ArrayList<>();
                                 if (jsonArray.length() > 0) {
-                                    for (int i = 0; i <= jsonArray.length(); i++) {
+                                    for (int i = 0; i <jsonArray.length(); i++) {
+
+                                        Log.d("id ", jsonArray.getJSONObject(i).getString("id") + "");
+                                        Log.d("first_name ", jsonArray.getJSONObject(i).getString("first_name") + "");
+                                        Log.d("avatar ", jsonArray.getJSONObject(i).getString("last_name") + "");
+
+
 
                                         Volley_pojo1 volley_pojo = new Volley_pojo1();
 
@@ -109,15 +116,18 @@ public class VollleyExample1 extends AppCompatActivity {
                                         volley_pojo.setAvatar(jsonArray.getJSONObject(i).getString("avatar"));
 
                                         al.add(volley_pojo);
+                                        Log.d("al size ", al.size() + "");
                                     }
 
                                     VolleyAdapter volleyAdapter = new VolleyAdapter(VollleyExample1.this, al);
                                     lv.setAdapter(volleyAdapter);
+
                                 }
 
                                 progressDialog.hide();
 
                             } catch (Exception e) {
+                                Log.d("Exception ",  e+"");
                                 progressDialog.hide();
                             }
                         }
@@ -132,6 +142,7 @@ public class VollleyExample1 extends AppCompatActivity {
 
 
             RequestQueue requestQueue = Volley.newRequestQueue(VollleyExample1.this);
+            requestQueue.getCache().clear();
             requestQueue.add(jsonObjectRequest);
 
         } catch (Exception e) {

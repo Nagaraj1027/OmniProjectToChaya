@@ -9,6 +9,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.omniprojecttochaya.R;
 import com.example.omniprojecttochaya.model.Volley_pojo1;
 
@@ -50,15 +52,31 @@ public class VolleyAdapter extends BaseAdapter {
         View listViewItem = inflater.inflate(R.layout.volley_row_layout, null, true);
 
         Log.d("al.size()", al.size() + "");
+
         TextView textViewId = (TextView) listViewItem.findViewById(R.id.textViewId);
-        TextView textViewName = (TextView) listViewItem.findViewById(R.id.textViewName);
-        TextView textViewEmail = (TextView) listViewItem.findViewById(R.id.textViewEmail);
-       // ImageView userImage = (ImageView) listViewItem.findViewById(R.id.textViewEmail);
+        TextView tvFirstName = (TextView) listViewItem.findViewById(R.id.tvFirstName);
+        TextView tyvLastName = (TextView) listViewItem.findViewById(R.id.tyvLastName);
+        ImageView img = (ImageView) listViewItem.findViewById(R.id.img);
 
         textViewId.setText(al.get(position).getId());
-        textViewName.setText(al.get(position).getFirst_name());
-        textViewEmail.setText(al.get(position).getLast_name());
-        //userimage.setText(al.get(position).getAvatar());
+        tvFirstName.setText(al.get(position).getFirst_name());
+        tyvLastName.setText(al.get(position).getLast_name());
+
+
+        RequestOptions options = new RequestOptions()
+                .placeholder(R.drawable.avatarupload)
+                .error(R.drawable.avatarupload);
+
+        //.centerCrop()
+        //.diskCacheStrategy(DiskCacheStrategy.ALL)
+        //.priority(Priority.HIGH);
+
+        Glide.with(context).load(al.get(position).getAvatar())
+                .apply(options)
+                .into(img);
+
+
+
 
         return listViewItem;
     }

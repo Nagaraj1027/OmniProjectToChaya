@@ -17,11 +17,11 @@
         android:id="@+id/buttonGet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get Data" />
+        android:text="Retrieve Data from API Using Volley" />
 
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
