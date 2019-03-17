@@ -19,12 +19,14 @@ import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.notificationsFcm.NotificationActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
 import com.example.omniprojecttochaya.recyclerview.RecyclerViewExample;
+import com.example.omniprojecttochaya.sensors.AccelerometerSensorActivity;
+import com.example.omniprojecttochaya.sensors.ProximitySensorActivity;
 import com.example.omniprojecttochaya.service.ServiceActivity;
 import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12,btn13;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13,btn14,btn15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn11 = (Button) findViewById(R.id.btn11);
         btn12 = (Button) findViewById(R.id.btn12);
         btn13 = (Button) findViewById(R.id.btn13);
+        btn14 = (Button) findViewById(R.id.btn14);
+        btn15 = (Button) findViewById(R.id.btn15);
+
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -64,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn11.setOnClickListener(this);
         btn12.setOnClickListener(this);
         btn13.setOnClickListener(this);
+        btn14.setOnClickListener(this);
+        btn15.setOnClickListener(this);
     }
 
     @Override
@@ -120,6 +127,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn13:
                 gotoSqLiteDataBase();
+                break;
+
+            case R.id.btn14:
+                gotoAcceleromterSensor();
+                break;
+
+            case R.id.btn15:
+                gotoProximitySensorActivity();
                 break;
         }
     }
@@ -189,6 +204,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoSqLiteDataBase() {
         Intent to_explicitAct = new Intent(MainActivity.this, DataActivity.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAcceleromterSensor() {
+        Intent to_explicitAct = new Intent(MainActivity.this, AccelerometerSensorActivity.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoProximitySensorActivity() {
+        Intent to_explicitAct = new Intent(MainActivity.this, ProximitySensorActivity.class);
         startActivity(to_explicitAct);
     }
 }
