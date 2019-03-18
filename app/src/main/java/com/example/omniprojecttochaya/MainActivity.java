@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.omniprojecttochaya.activitylifecycle.OneActivity;
+import com.example.omniprojecttochaya.database.DataActivity;
 import com.example.omniprojecttochaya.dynamicfragments.DynamicFragmntsActivity;
 import com.example.omniprojecttochaya.explicitintent.FirstActivity;
 import com.example.omniprojecttochaya.fragment.StaticFragmentsActivity;
@@ -24,7 +25,7 @@ import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11,btn12;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12,btn13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 //master branch
+        //master branch
         initViews();
         Log.e("inside MainActivity", "inside MainActivity");
     }
 
 
     void initViews() {
+
         btn1 = (Button) findViewById(R.id.btn1);
         btn2 = (Button) findViewById(R.id.btn2);
         btn3 = (Button) findViewById(R.id.btn3);
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn10 = (Button) findViewById(R.id.btn10);
         btn11 = (Button) findViewById(R.id.btn11);
         btn12 = (Button) findViewById(R.id.btn12);
+        btn13 = (Button) findViewById(R.id.btn13);
 
         btn1.setOnClickListener(this);
         btn2.setOnClickListener(this);
@@ -69,32 +73,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn10.setOnClickListener(this);
         btn11.setOnClickListener(this);
         btn12.setOnClickListener(this);
+        btn13.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.btn1:
                 explictIntent();
                 break;
+
             case R.id.btn2:
                 implicitIntent();
                 break;
+
             case R.id.btn3:
                 activityLifecycle();
                 break;
+
             case R.id.btn4:
                 gotoStaticFragments();
                 break;
             case R.id.btn5:
                 gotoListview();
                 break;
+
             case R.id.btn6:
                 gotoRecyclerViewExample();
                 break;
+
             case R.id.btn7:
                 gotoDynamicFragments();
                 break;
+
             case R.id.btn8:
                 gotoJsonParser();
                 break;
@@ -110,8 +122,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn11:
                 gotoIntentService();
                 break;
+
             case R.id.btn12:
                 gotoNotification();
+                break;
+
+            case R.id.btn13:
+                gotoSqLiteDataBase();
                 break;
         }
     }
@@ -176,6 +193,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoNotification() {
         Intent to_explicitAct = new Intent(MainActivity.this, NotificationActivity.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoSqLiteDataBase() {
+        Intent to_explicitAct = new Intent(MainActivity.this, DataActivity.class);
         startActivity(to_explicitAct);
     }
 }
