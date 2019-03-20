@@ -24,7 +24,6 @@ public class SingleTaskC extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(SingleTaskC.this, SingleTaskD.class);
-                i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(i);
 
             }

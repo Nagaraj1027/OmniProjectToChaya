@@ -25,11 +25,9 @@ public class SingleTaskD extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              /*  Intent i = new Intent(SingleTaskD.this, SingleTaskB.class);
-                //Should launch Activity B with SingleTask mode programatically, it is not possible to do so and test
-                startActivity(i);*/
+                Intent i = new Intent(SingleTaskD.this, SingleTaskB.class);
 
-                Toast.makeText(SingleTaskD.this, "Should launch Activity B with SingleTask mode programatically, but it is not possible to do so and test", Toast.LENGTH_LONG).show();
+                startActivity(i);
             }
         });
 

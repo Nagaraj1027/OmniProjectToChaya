@@ -30,10 +30,10 @@ public class SingleTopD extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(SingleTopD.this, SingleTopD.class);
+                Intent i = new Intent(SingleTopD.this, SingleTopB.class);
                 startActivity(i);
 
-                Toast.makeText(SingleTopD.this, "Activity D is not recreated as its SingleTop", Toast.LENGTH_LONG).show();
+              Toast.makeText(SingleTopD.this, "Activity D is not recreated as its SingleTop", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -43,22 +43,13 @@ public class SingleTopD extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+
         notify("onNewIntent");
     }
 
     private void notify(String methodName) {
 
-        String name = this.getClass().getName();
-        String[] strings = name.split("\\.");
-
-
-        Notification noti = new Notification.Builder(SingleTopD.this)
-                .setContentTitle(methodName + "" + strings[strings.length - 1])
-                .setAutoCancel(true).setSmallIcon(R.drawable.avatarupload)
-                .setContentText(name).build();
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notificationManager.notify((int) System.currentTimeMillis(), noti);
-
+        Toast.makeText(SingleTopD.this, "onNewIntent", Toast.LENGTH_LONG).show();
     }
 
 }

@@ -31,7 +31,8 @@
 
         <!-- Single Task mode activities -->
         <activity android:name=".launchmodes.singletask.SingleTaskA" />
-        <activity android:name=".launchmodes.singletask.SingleTaskB" />
+        <activity android:name=".launchmodes.singletask.SingleTaskB"
+            android:launchMode="singleTask" />
         <activity android:name=".launchmodes.singletask.SingleTaskC" />
         <activity android:name=".launchmodes.singletask.SingleTaskD" />
 
