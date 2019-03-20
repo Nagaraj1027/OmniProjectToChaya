@@ -166,6 +166,47 @@
                 android:textColor="@color/white" />
 
 
+            <Button
+                android:id="@+id/btn16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn15"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Goto Standard mode"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn16"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Goto Single top mode  "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn17"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="goto Single task  "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn18"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="goto Single instance mode  "
+                android:textColor="@color/white" />
+
+
         </RelativeLayout>
     </ScrollView>
 

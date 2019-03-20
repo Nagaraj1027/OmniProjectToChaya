@@ -15,6 +15,10 @@ import com.example.omniprojecttochaya.fragment.StaticFragmentsActivity;
 import com.example.omniprojecttochaya.implicitintent.ImplicitIntent;
 import com.example.omniprojecttochaya.intentservice.IntentServiceActivity;
 import com.example.omniprojecttochaya.jsonparser.JSonActivity;
+import com.example.omniprojecttochaya.launchmodes.singleinstance.SingeInstanceA;
+import com.example.omniprojecttochaya.launchmodes.singletask.SingleTaskA;
+import com.example.omniprojecttochaya.launchmodes.singletop.SingleTopA;
+import com.example.omniprojecttochaya.launchmodes.standardmode.StandardModeA;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
 import com.example.omniprojecttochaya.notificationsFcm.NotificationActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
@@ -26,7 +30,7 @@ import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13,btn14,btn15;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13,btn14,btn15,btn16,btn17,btn18,btn19;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn13 = (Button) findViewById(R.id.btn13);
         btn14 = (Button) findViewById(R.id.btn14);
         btn15 = (Button) findViewById(R.id.btn15);
+        btn16 = (Button) findViewById(R.id.btn16);
+        btn17 = (Button) findViewById(R.id.btn17);
+        btn18 = (Button) findViewById(R.id.btn18);
+        btn19 = (Button) findViewById(R.id.btn19);
 
 
         btn1.setOnClickListener(this);
@@ -71,6 +79,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn13.setOnClickListener(this);
         btn14.setOnClickListener(this);
         btn15.setOnClickListener(this);
+        btn16.setOnClickListener(this);
+        btn17.setOnClickListener(this);
+        btn18.setOnClickListener(this);
+        btn19.setOnClickListener(this);
+
     }
 
     @Override
@@ -135,6 +148,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn15:
                 gotoProximitySensorActivity();
+                break;
+
+            case R.id.btn16:
+                gotoAActivityStandardMode();
+                break;
+
+            case R.id.btn17:
+                gotoAActivitySingleTopdMode();
+                break;
+
+            case R.id.btn18:
+                gotoAActivitySingleTaskMode();
+                break;
+            case R.id.btn19:
+                gotoAActivitySingleInstancedMode();
                 break;
         }
     }
@@ -214,6 +242,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     void gotoProximitySensorActivity() {
         Intent to_explicitAct = new Intent(MainActivity.this, ProximitySensorActivity.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivityStandardMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, StandardModeA.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivitySingleTopdMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingleTopA.class);
+        startActivity(to_explicitAct);
+    }
+
+    void gotoAActivitySingleTaskMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingleTaskA.class);
+        startActivity(to_explicitAct);
+    }
+    void gotoAActivitySingleInstancedMode() {
+        Intent to_explicitAct = new Intent(MainActivity.this, SingeInstanceA.class);
         startActivity(to_explicitAct);
     }
 }
