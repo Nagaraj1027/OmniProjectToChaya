@@ -170,6 +170,7 @@
                 android:text="Proximity Sensor "
                 android:textColor="@color/white" />
 
+
             <Button
                 android:id="@+id/btn16"
                 android:layout_width="match_parent"
@@ -177,7 +178,7 @@
                 android:layout_below="@+id/btn15"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Standard Mode "
+                android:text="Goto Standard mode"
                 android:textColor="@color/white" />
 
             <Button
@@ -187,7 +188,7 @@
                 android:layout_below="@+id/btn16"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Single Top "
+                android:text="Goto Single top mode  "
                 android:textColor="@color/white" />
 
             <Button
@@ -197,7 +198,7 @@
                 android:layout_below="@+id/btn17"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Single Task"
+                android:text="goto Single task  "
                 android:textColor="@color/white" />
 
             <Button
@@ -207,8 +208,9 @@
                 android:layout_below="@+id/btn18"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Single Instance"
+                android:text="goto Single instance mode  "
                 android:textColor="@color/white" />
+
 
         </RelativeLayout>
     </ScrollView>
