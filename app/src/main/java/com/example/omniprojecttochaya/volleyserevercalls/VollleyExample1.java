@@ -106,8 +106,6 @@ public class VollleyExample1 extends AppCompatActivity {
                                         Log.d("first_name ", jsonArray.getJSONObject(i).getString("first_name") + "");
                                         Log.d("avatar ", jsonArray.getJSONObject(i).getString("last_name") + "");
 
-
-
                                         Volley_pojo1 volley_pojo = new Volley_pojo1();
 
                                         volley_pojo.setId(jsonArray.getJSONObject(i).getString("id"));

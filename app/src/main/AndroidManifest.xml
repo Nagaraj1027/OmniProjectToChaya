@@ -3,6 +3,8 @@
     package="com.example.omniprojecttochaya">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:name=".omniclass.OmniClass"
         android:allowBackup="true"
@@ -11,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".listview.ListViewExampleActivity" />
+        <activity
+            android:name=".listview.ListViewExampleActivity"
+            android:launchMode="standard" />
         <activity android:name=".fragment.StaticFragmentsActivity" />
         <activity android:name=".activitylifecycle.SecondActivity" />
         <activity android:name=".activitylifecycle.OneActivity" />
@@ -28,7 +32,10 @@
         <activity android:name=".notificationsFcm.NotificationActivity" />
         <activity android:name=".database.DataActivity" />
         <activity android:name=".database.DisplayData" />
-        <activity android:name=".splash.SplashActivity">
+        <activity android:name=".sensors.AccelerometerSensorActivity" />
+        <activity android:name=".sensors.ProximitySensorActivity" />
+        <activity android:name=".splash.SplashActivity"/>
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

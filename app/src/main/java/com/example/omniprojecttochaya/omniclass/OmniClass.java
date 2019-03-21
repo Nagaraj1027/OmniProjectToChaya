@@ -42,13 +42,13 @@ public class OmniClass extends Application {
         return password;
     }
 
-    public static void saveLginStateIntoPreferences(Boolean lState){
+    public static void saveLginStateIntoPreferences(Boolean lState) {
         editor.putBoolean(OmniConstants.KEY_LOGINSTATE, lState);
         editor.commit();
     }
 
-    public static Boolean getLoginStateFromPreferences(){
-        Boolean lState= sharedPreferences.getBoolean(OmniConstants.KEY_LOGINSTATE,false);
+    public static Boolean getLoginStateFromPreferences() {
+        Boolean lState = sharedPreferences.getBoolean(OmniConstants.KEY_LOGINSTATE, false);
         return lState;
     }
 }
