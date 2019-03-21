@@ -145,6 +145,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn15:
                 gotoProximitySensorActivity();
                 break;
+
         }
     }
 

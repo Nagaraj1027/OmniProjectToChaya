@@ -170,6 +170,45 @@
                 android:text="Proximity Sensor "
                 android:textColor="@color/white" />
 
+            <Button
+                android:id="@+id/btn16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn15"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Standard Mode "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn16"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Single Top "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn17"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Single Task"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn18"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="Single Instance"
+                android:textColor="@color/white" />
 
         </RelativeLayout>
     </ScrollView>

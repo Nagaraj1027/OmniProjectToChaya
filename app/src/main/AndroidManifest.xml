@@ -25,7 +25,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".jsonparser.JSonActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
-        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".volleyserevercalls.VollleyExample1" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".intentservice.IntentServiceActivity" />
@@ -34,7 +34,7 @@
         <activity android:name=".database.DisplayData" />
         <activity android:name=".sensors.AccelerometerSensorActivity" />
         <activity android:name=".sensors.ProximitySensorActivity" />
-        <activity android:name=".splash.SplashActivity"/>
+        <activity android:name=".splash.SplashActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +55,7 @@
             </intent-filter>
         </service>
         <service
-        android:name=".intentservice.TimeCountService"
+            android:name=".intentservice.TimeCountService"
             android:exported="false" />
         <service
             android:name=".service.ServiceTimeCount"
