@@ -112,7 +112,7 @@
                 android:layout_below="@+id/btn9"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Service example"
+                android:text="Retrofit LIBRARY CALL"
                 android:textColor="@color/white" />
 
             <Button
@@ -122,7 +122,7 @@
                 android:layout_below="@+id/btn10"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Intent service "
+                android:text="Service example"
                 android:textColor="@color/white" />
 
             <Button
@@ -132,7 +132,7 @@
                 android:layout_below="@+id/btn11"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Notification FCM "
+                android:text="Intent service "
                 android:textColor="@color/white" />
 
             <Button
@@ -142,7 +142,7 @@
                 android:layout_below="@+id/btn12"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="SQLite DataBase "
+                android:text="Notification FCM "
                 android:textColor="@color/white" />
 
             <Button
@@ -152,7 +152,7 @@
                 android:layout_below="@+id/btn13"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="AcceleroMeter Sensor "
+                android:text="SQLite DataBase "
                 android:textColor="@color/white" />
 
             <Button
@@ -162,9 +162,8 @@
                 android:layout_below="@+id/btn14"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Proximity Sensor "
+                android:text="AcceleroMeter Sensor "
                 android:textColor="@color/white" />
-
 
             <Button
                 android:id="@+id/btn16"
@@ -173,8 +172,9 @@
                 android:layout_below="@+id/btn15"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Goto Standard mode"
+                android:text="Proximity Sensor "
                 android:textColor="@color/white" />
+
 
             <Button
                 android:id="@+id/btn17"
@@ -183,7 +183,7 @@
                 android:layout_below="@+id/btn16"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="Goto Single top mode  "
+                android:text="Goto Standard mode"
                 android:textColor="@color/white" />
 
             <Button
@@ -193,7 +193,7 @@
                 android:layout_below="@+id/btn17"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
-                android:text="goto Single task  "
+                android:text="Goto Single top mode  "
                 android:textColor="@color/white" />
 
             <Button
@@ -203,7 +203,27 @@
                 android:layout_below="@+id/btn18"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorPrimary"
+                android:text="goto Single task  "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn19"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
                 android:text="goto Single instance mode  "
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn20"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorPrimary"
+                android:text="goto oKHttp "
                 android:textColor="@color/white" />
 
 

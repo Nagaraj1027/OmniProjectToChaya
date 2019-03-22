@@ -55,6 +55,7 @@
         <activity android:name=".jsonparser.JSonActivity" />
         <activity android:name=".recyclerview.RecyclerViewExample" />
         <activity android:name=".volleyserevercalls.VollleyExample1" />
+        <activity android:name=".retrofit.RetrofitActivity" />
         <activity android:name=".service.ServiceActivity" />
         <activity android:name=".intentservice.IntentServiceActivity" />
         <activity android:name=".notificationsFcm.NotificationActivity" />
@@ -63,6 +64,7 @@
         <activity android:name=".sensors.AccelerometerSensorActivity" />
         <activity android:name=".sensors.ProximitySensorActivity" />
         <activity android:name=".login.LoginActivity" />
+        <activity android:name=".okhttp.OkHttpActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
