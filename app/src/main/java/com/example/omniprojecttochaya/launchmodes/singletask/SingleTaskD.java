@@ -30,6 +30,5 @@ public class SingleTaskD extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
     }
 }
