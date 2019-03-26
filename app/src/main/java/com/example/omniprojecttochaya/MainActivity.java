@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
-        //master branch
+        //master branch 
+		//commit test
         initViews();
         Log.e("inside RetrofitActivity", "inside RetrofitActivity");
     }
