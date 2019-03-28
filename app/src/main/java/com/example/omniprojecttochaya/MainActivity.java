@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.omniprojecttochaya.activitylifecycle.OneActivity;
+import com.example.omniprojecttochaya.contentprovider.ContentActivity;
 import com.example.omniprojecttochaya.database.DataActivity;
 import com.example.omniprojecttochaya.dynamicfragments.DynamicFragmntsActivity;
 import com.example.omniprojecttochaya.explicitintent.FirstActivity;
@@ -21,6 +22,7 @@ import com.example.omniprojecttochaya.launchmodes.singletask.SingleTaskA;
 import com.example.omniprojecttochaya.launchmodes.singletop.SingleTopA;
 import com.example.omniprojecttochaya.launchmodes.standardmode.StandardModeA;
 import com.example.omniprojecttochaya.listview.ListViewExampleActivity;
+import com.example.omniprojecttochaya.maps.MapsActivity;
 import com.example.omniprojecttochaya.notificationsFcm.NotificationActivity;
 import com.example.omniprojecttochaya.okhttp.OkHttpActivity;
 import com.example.omniprojecttochaya.omniclass.OmniConstants;
@@ -32,17 +34,17 @@ import com.example.omniprojecttochaya.service.ServiceActivity;
 import com.example.omniprojecttochaya.volleyserevercalls.VollleyExample1;
 
 
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13,btn14,btn15,btn16,btn17,btn18,btn19,btn20,btn21;
+    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12, btn13, btn14, btn15,
+            btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.relative_layout);
         //master branch
-		//commit test
+        //commit test
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         getSupportActionBar();
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn19 = (Button) findViewById(R.id.btn19);
         btn20 = (Button) findViewById(R.id.btn20);
         btn21 = (Button) findViewById(R.id.btn21);
+        btn22 = (Button) findViewById(R.id.btn22);
+        btn23 = (Button) findViewById(R.id.btn23);
 
 
         btn1.setOnClickListener(this);
@@ -103,6 +107,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn19.setOnClickListener(this);
         btn20.setOnClickListener(this);
         btn21.setOnClickListener(this);
+        btn22.setOnClickListener(this);
+        btn23.setOnClickListener(this);
 
     }
 
@@ -148,51 +154,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn10:
                 gotoRerofitCall();
-
                 break;
 
             case R.id.btn11:
                 gotoService();
-
                 break;
 
             case R.id.btn12:
                 gotoIntentService();
-
                 break;
 
             case R.id.btn13:
                 gotoNotification();
-
                 break;
 
             case R.id.btn14:
                 gotoSqLiteDataBase();
-
                 break;
 
             case R.id.btn15:
                 gotoAcceleromterSensor();
-
                 break;
 
             case R.id.btn16:
                 gotoProximitySensorActivity();
-
                 break;
 
             case R.id.btn17:
                 gotoAActivityStandardMode();
-
                 break;
 
             case R.id.btn18:
                 gotoAActivitySingleTopdMode();
-
                 break;
             case R.id.btn19:
                 gotoAActivitySingleTaskMode();
-
                 break;
 
             case R.id.btn20:
@@ -203,6 +199,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 gotoKHttp();
 
                 break;
+            case R.id.btn22:
+                gotoMapsActivity();
+                break;
+            case R.id.btn23:
+                gotoContentActivity();
         }
     }
 
@@ -303,6 +304,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent to_explicitAct = new Intent(MainActivity.this, SingleTaskA.class);
         startActivity(to_explicitAct);
     }
+
     void gotoAActivitySingleInstancedMode() {
         Intent to_explicitAct = new Intent(MainActivity.this, SingeInstanceA.class);
         startActivity(to_explicitAct);
@@ -311,6 +313,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void gotoKHttp() {
         Intent to_explicitAct = new Intent(MainActivity.this, OkHttpActivity.class);
         startActivity(to_explicitAct);
+    }
+
+    void gotoMapsActivity() {
+        Intent to_maps = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(to_maps);
+    }
+
+    void gotoContentActivity() {
+        Intent to_senddata = new Intent(MainActivity.this, ContentActivity.class);
+        startActivity(to_senddata);
     }
 
 }

@@ -231,6 +231,26 @@
                 android:text="goto oKHttp "
                 android:textColor="@color/white" />
 
+            <Button
+                android:id="@+id/btn22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn21"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Google Maps"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn22"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Content Provider"
+                android:textColor="@color/white" />
+
 
         </RelativeLayout>
     </ScrollView>
